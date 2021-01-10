@@ -53,7 +53,17 @@ pipeline {
             }
         }
     }
-    
+    post {
+        always {
+            echo "This is always section"
+        }
+        success {
+            echo "This is successful notification"
+        }
+        failure {
+            echo "This is failure notification"
+        }
+    }
 }
 
 def deploy(String environment) {
